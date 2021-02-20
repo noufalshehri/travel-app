@@ -7,7 +7,6 @@ A travel web app that obtains a desired trip location & date from the user, and 
 3. WeatherBit
 
 ## Structure of the Project:
-`
 - Root:
   - `package.json`
   - `readme.md`
@@ -23,12 +22,10 @@ A travel web app that obtains a desired trip location & date from the user, and 
         - `app.js` (name will vary)
       - styles folder
         - `style.scss` (name will vary - may be broke into partials)
-`
 
 ## Install
-   `
-   npm run build-dev
-    npm run build-prod
-    npm start
-    `
+- npm run build-dev
+- npm run build-prod
+- npm start
+    
 
