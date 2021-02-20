@@ -1,0 +1,237 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    overflow-x: visible; 
+}
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    direction: rtl;
+    .overlay{
+        background:rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        position: fixed; 
+        z-index: -2;
+    }
+}
+
+//main content container
+.container{
+    width: 80%;
+    display: grid;
+    grid-template-rows: 320px 300px;
+    grid-template-columns:1fr ;
+    grid-template-areas:
+    "col2"
+    "col1";
+    justify-content: space-around;
+    margin: 0 auto;
+
+} 
+// output column
+.output{
+    width: 100%;
+    grid-area: col1;
+
+    #search-btn{
+        background-color: #64341A;
+        text-decoration: none;
+        border-radius:15px ;
+        color: white;
+        padding: 4px 10px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        font-size: 1rem;
+        font-weight: 500;
+        width: fit-content;
+    }
+    #search-btn:visited{
+        text-decoration: none;
+        color: white;
+
+    }
+    section p{
+        margin-bottom: 20px;
+    }
+    #city{
+        margin-top: 20px;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    #duration, #desc{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    #temp{
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+}
+
+// form column
+.user-input{
+    width: 100%;
+    grid-area: col2;
+h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+}
+input{
+    background-color: transparent;  
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    margin-bottom: 30px;
+    display: block;
+    width: 200px;
+
+}
+input[type="date"]{
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+
+}
+button{
+    border: none;
+    background-color: transparent;
+    color: white;
+    display: block;
+    width: 80%;
+    text-align: right;
+}
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+}
+
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: white;
+    
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: white;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: white;
+
+} 
+
+/* Medium Screens */
+@media (min-width: 600px) and (max-width:900px) {
+    html,body
+    {
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        direction: ltr;
+    }
+    .container{
+        width: 100%;
+        grid-template-rows: 1fr;
+        grid-template-columns: 300px 300px;
+        grid-template-areas:
+        "col1 col2";
+        justify-content: space-around;
+        margin: 0 auto;
+    } 
+    .output{
+        #city{
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+        #duration, #desc{
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+        #temp{
+            font-size: 2.2rem;
+            font-weight: 700;
+        } 
+    }
+
+.user-input{
+button{
+    width: 100%;
+
+}
+h2{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-top: 20px;
+
+}
+}
+
+  }
+  /* Large Screens */
+  @media (min-width:901px) {
+    html,body
+    {
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        direction: ltr;
+    }
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 300px 300px;
+        grid-template-areas:
+        "col1 col2";
+        justify-content: space-around;
+        margin: 0 auto;
+
+    } 
+    .output{
+    #city{
+        margin-top: 20px;
+        font-size: 2.5em;
+    }
+    #duration, #desc{
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+    #temp{
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+}
+.user-input{
+    button{
+        width: 100%;
+    
+    }
+    h2{
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-top: 20px;
+
+    }    
+    input{
+        width: 290px;
+    }
+    }
+
+  }

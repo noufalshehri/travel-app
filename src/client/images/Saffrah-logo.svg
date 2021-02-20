@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="193" viewBox="0 0 230 193">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        font-size: 70px;
+        font-family: Nanami;
+      }
+
+      .cls-2 {
+        font-size: 50px;
+        font-family: Cairo-Bold, Cairo;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        font-size: 30px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .cls-4 {
+        stroke-width: 2px;
+      }
+
+      .cls-5 {
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="Group_1" data-name="Group 1" transform="translate(-120 -59)">
+    <text id="Saffrah" class="cls-1" transform="translate(120 127)"><tspan x="0" y="0">Saffrah</tspan></text>
+    <text id="ســفــرة_" data-name="ســفــرة " class="cls-2" transform="translate(141 133)"><tspan x="0" y="65">ســفــرة</tspan><tspan class="cls-3" y="65"> </tspan></text>
+    <line id="Line_2" data-name="Line 2" class="cls-4" x2="229" transform="translate(120.5 143.5)"/>
+    <line id="Line_5" data-name="Line 5" class="cls-5" x1="17" y2="5" transform="translate(288.5 159.5)"/>
+  </g>
+</svg>

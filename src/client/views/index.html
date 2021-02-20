@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saffrah - سَـفـرة</title>
+    <!-- logo -->
+    <link rel="icon" href="images/logo.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="body" style="background-image: url(images/Saffrah-background.svg);">
+    <!-- dark overlay -->
+    <section class="overlay">
+    </section>
+    <!-- header -->
+    <header id="header">
+        <section class="logo-section">
+            <img src="images/Saffrah-logo.svg" alt="logo" width="100px">
+        </section>
+        <section class="lang-btn">
+            <button id="arabic-btn" onclick="Client.setLang('Arabic')">عربي</button>
+        </section>
+    </header>
+    <!-- main content -->
+    <main class="container">
+        <!-- section to be filled with the response -->
+        <section class="output">
+            <section>
+                <p id="city">
+                </p>
+            </section>
+            <section>
+                <p id="duration"></p>
+            </section>
+            <section>
+                <p id="temp">
+                </p>
+            </section>
+            <section>
+                <p id="desc">
+                </p>
+            </section>
+            <a href="https://www.google.com/travel/" id="search-btn" style="display: none">
+                Search for flights
+            </a>
+        </section>
+        <!-- form section -->
+        <section class="user-input">
+            <h2 id="main-heading">Plan Your Trip</h2>
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input id="name" type="text" name="input" value="" placeholder="City or Country">
+                <label for="trip-start" id="departure">Departure date</label>
+                <input type="date" id="start" name="trip-start" required pattern="\d{4}-\d{2}-\d{2}">
+                <label for="trip-start" id="return">Return date</label>
+                <input type="date" id="end" name="trip-end" required pattern="\d{4}-\d{2}-\d{2}">
+
+                <button type="submit" onclick="return Client.handleSubmit(event)">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Web Services -->
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
