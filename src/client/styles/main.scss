@@ -55,6 +55,10 @@ body{
         color: white;
 
     }
+    #search-btn:hover{
+border: 1px solid white;
+
+    }
     section p{
         margin-bottom: 20px;
     }
@@ -106,6 +110,8 @@ button{
     width: 80%;
     text-align: right;
 }
+
+
 input::-webkit-calendar-picker-indicator {
     filter: invert(1);
   }
